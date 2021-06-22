@@ -1,0 +1,52 @@
+.Navbar {
+  height: 80px;
+  width: 100%;
+  background-color: #222224;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+}
+.Navbar main {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+}
+.Navbar div:nth-of-type(1) {
+  height: 70%;
+  flex: 0.7;
+}
+.Navbar img {
+  height: 100%;
+  border-radius: 5px;
+}
+.Navbar nav {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+.Navbar nav div {
+  display: inline-block;
+}
+.Navbar a {
+  color: white;
+  position: relative;
+  font-weight: lighter;
+  font-size: 1.3rem;
+}
+.Navbar a::after {
+  content: " ";
+  height: 2px;
+  width: 0%;
+  background: white;
+  position: absolute;
+  bottom: -5px;
+  right: 0%;
+  transition: 0.3s;
+}
+.Navbar a:hover::after {
+  width: 100%;
+  left: 0%;
+}

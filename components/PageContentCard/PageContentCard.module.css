@@ -1,0 +1,35 @@
+.PageContentCard {
+  display: flex;
+  justify-content: center;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.PageContentCard section {
+  width: 70%;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+.PageContentCard h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  color: red;
+  font-weight: 300;
+  font-size: 3rem;
+  border-bottom: 1px solid black;
+}
+.PageContentCard section span {
+  font-weight: 600;
+}
+.PageContentCard section p {
+  margin-bottom: 70px;
+}
+.PageContentCard section p:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+.PageContentCard section p:nth-of-type(2) a {
+  color: red;
+  text-decoration: underline;
+}
+.PageContentCard section div {
+  display: flex;
+  justify-content: center;
+}
