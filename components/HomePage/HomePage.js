@@ -36,10 +36,10 @@ const HomePage = () => {
           malgorzata.sikorska@arkadiawrzesnia.pl
         </a>
       </p>
-      <div>
+      <section>
         <Button href="/galeria">GALERIA - Zobacz nasze pokoje!</Button>
-        <Button>CENNIK</Button>
-      </div>
+        <Button href="#">CENNIK</Button>
+      </section>
     </PageContentCard>
   );
 };

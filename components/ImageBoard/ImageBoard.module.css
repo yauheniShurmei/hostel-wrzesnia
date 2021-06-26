@@ -20,8 +20,24 @@
 .ImageBoard h1 {
   font-size: 3rem;
   text-shadow: 0px 0px 1px #222224;
+  overflow-wrap: break-word;
 }
 .ImageBoard span {
   font-size: 2rem;
   text-shadow: 0px 0px 4px #222224;
 }
+
+@media (max-width: 960px) {
+  .ImageBoard div {
+    width: 90%;
+  }
+  .ImageBoard h1 {
+    font-size: 2rem;
+  }
+  .ImageBoard span {
+    font-size: 1.7rem;
+  }
+  .Tytul {
+    width: 100%;
+  }
+} ;

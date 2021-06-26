@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   font-family: "Source Sans Pro", sans-serif;
+  overflow-wrap: break-word;
 }
 .PageContentCard section {
   width: 70%;
@@ -29,7 +30,18 @@
   color: red;
   text-decoration: underline;
 }
-.PageContentCard section div {
+.PageContentCard section section {
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .PageContentCard section {
+    width: 90%;
+  }
+  .PageContentCard section section {
+    flex-direction: column;
+  }
 }

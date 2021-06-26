@@ -1,15 +1,25 @@
 .Button {
   text-align: center;
-  width: 300px;
+  /* width: 50px; */
+  min-width: 30%;
   padding: 10px;
-  margin: 50px;
+  margin: 20px;
   border: 1px solid black;
   border-radius: 5px;
   transition: 0.3s;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  flex-direction: row;
 }
 .Button:hover {
   background-color: #222224;
   color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }

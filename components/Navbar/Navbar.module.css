@@ -7,6 +7,7 @@
   justify-content: center;
   position: fixed;
   top: 0;
+  z-index: 100;
 }
 .Navbar main {
   display: flex;
@@ -26,6 +27,7 @@
   flex: 1;
   display: flex;
   justify-content: space-evenly;
+  white-space: nowrap;
 }
 .Navbar nav div {
   display: inline-block;
@@ -49,4 +51,18 @@
 .Navbar a:hover::after {
   width: 100%;
   left: 0%;
+}
+
+@media (max-width: 800px) {
+  .Navbar nav {
+    display: none;
+  }
+}
+@media (max-width: 960px) {
+  .Navbar main {
+    width: 90%;
+  }
+  .Navbar div:nth-of-type(1) {
+    flex: 0.4;
+  }
 }

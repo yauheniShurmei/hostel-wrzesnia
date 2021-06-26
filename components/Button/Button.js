@@ -1,10 +1,11 @@
 import classes from "./Button.module.css";
+// import Link from "next/link";
 
 const Button = (props) => {
   return (
-    <a className={classes.Button} href={props.href}>
-      {props.children}
-    </a>
+    <div className={classes.Button}>
+      <a href={`${props.href}`}>{props.children}</a>
+    </div>
   );
 };
 

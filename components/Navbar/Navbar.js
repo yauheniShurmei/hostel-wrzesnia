@@ -12,7 +12,7 @@ const Navbar = () => {
           <Link href="/strona-glowna">STRONA GŁÓWNA</Link>
           <Link href="#">OFERTA</Link>
           <Link href="/galeria">GALERIA</Link>
-          <Link href="#">KONTAKT</Link>
+          <Link href="/kontakt">KONTAKT</Link>
           <span>
             <Link href="#">PL</Link>
             {/* <Link href="#">RUS</Link> */}
