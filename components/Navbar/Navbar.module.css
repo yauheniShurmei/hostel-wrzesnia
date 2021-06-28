@@ -3,11 +3,13 @@
   width: 100%;
   background-color: #222224;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: fixed;
   top: 0;
   z-index: 100;
+  transition: all 1s;
 }
 .Navbar main {
   display: flex;
@@ -15,7 +17,7 @@
   width: 80%;
   height: 100%;
 }
-.Navbar div:nth-of-type(1) {
+.Logo {
   height: 70%;
   flex: 0.7;
 }
@@ -23,15 +25,20 @@
   height: 100%;
   border-radius: 5px;
 }
-.Navbar nav {
+.navLink {
   flex: 1;
-  display: flex;
-  justify-content: space-evenly;
+  /* display: flex; */
+  /* justify-content: space-evenly; */
   white-space: nowrap;
+
+  float: right;
 }
-.Navbar nav div {
+.navLink a {
   display: inline-block;
+
+  margin: 0 15px;
 }
+
 .Navbar a {
   color: white;
   position: relative;
@@ -53,16 +60,54 @@
   left: 0%;
 }
 
+/*--------------- BURGER MENU-------------- */
+.BurgerMenuSection {
+  width: 100%;
+  display: none;
+  justify-content: flex-end;
+}
+.BurgerMenuDiv div {
+  width: 2.8rem;
+  height: 2px;
+  margin: 0.5rem;
+  background-color: white;
+}
+
+/* ----------OPEN MENU---------- */
+.CloseMenu {
+  left: -100%;
+}
+.OpenMenu {
+  left: 0%;
+}
+
+/* -----MEDIA@@@@@------ */
 @media (max-width: 800px) {
-  .Navbar nav {
-    display: none;
+  .navLink {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #222224;
+    top: 80px;
+
+    text-align: center;
+    transition: all 0.5s;
+  }
+  .navLink a {
+    display: block;
+    line-height: 80px;
+  }
+  .BurgerMenuSection {
+    display: flex;
+    margin: 50px 0;
+    line-height: 30px;
   }
 }
 @media (max-width: 960px) {
   .Navbar main {
     width: 90%;
   }
-  .Navbar div:nth-of-type(1) {
+  .Logo {
     flex: 0.4;
   }
 }
