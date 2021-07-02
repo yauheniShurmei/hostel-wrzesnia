@@ -8,6 +8,9 @@ const Navbar = () => {
   let menuClasses = [classes.navLink, classes.CloseMenu];
   isOpenBurgerMenu ? (menuClasses[1] = classes.OpenMenu) : null;
 
+  let openCloseMenuClasses = [classes.BurgerMenuDiv, classes.isClose];
+  isOpenBurgerMenu ? (openCloseMenuClasses[1] = classes.isOpen) : null;
+
   const onOpenMenuHandler = () => {
     setIsOpenBurgerMenu(!isOpenBurgerMenu);
   };
@@ -29,7 +32,10 @@ const Navbar = () => {
           </span>
         </nav>
         <section className={classes.BurgerMenuSection}>
-          <div onClick={onOpenMenuHandler} className={classes.BurgerMenuDiv}>
+          <div
+            onClick={onOpenMenuHandler}
+            className={openCloseMenuClasses.join(" ")}
+          >
             <div></div>
             <div></div>
             <div></div>

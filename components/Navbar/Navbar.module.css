@@ -30,8 +30,6 @@
 }
 .navLink {
   flex: 1;
-  /* display: flex; */
-  /* justify-content: space-evenly; */
   white-space: nowrap;
 
   float: right;
@@ -74,6 +72,7 @@
   height: 2px;
   margin: 0.5rem;
   background-color: white;
+  transition: 0.3s;
 }
 
 /* ----------OPEN MENU---------- */
@@ -82,6 +81,19 @@
 }
 .OpenMenu {
   left: 0%;
+}
+/* ------------ X ---------------- */
+.isOpen div:nth-of-type(1) {
+  transform: translateX(-6px) translateY(-6px) rotate(-45deg);
+  transform-origin: right;
+}
+.isOpen div:nth-of-type(2) {
+  opacity: 0;
+  transform: scale(0);
+}
+.isOpen div:nth-of-type(3) {
+  transform: translateX(6px) translateY(-26px) rotate(45deg);
+  transform-origin: left;
 }
 
 /* -----MEDIA@@@@@------ */

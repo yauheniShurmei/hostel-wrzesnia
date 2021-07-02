@@ -1,4 +1,5 @@
 import PageContentCard from "../../components/PageContentCard/PageContentCard";
+import classes from "./index.module.css";
 
 const Cennik = () => {
   return (
@@ -41,6 +42,7 @@ const Cennik = () => {
         </tbody>
       </table>
       <h2>POBYT POW. 30 NOCY - 600 zł / MIESIĄC</h2>
+      <div className={classes.BackgroundImage}></div>
     </PageContentCard>
   );
 };
