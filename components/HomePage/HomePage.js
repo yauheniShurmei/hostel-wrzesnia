@@ -1,7 +1,15 @@
 import Button from "../Button/Button";
 import PageContentCard from "../PageContentCard/PageContentCard";
+import { Document, Page } from "react-pdf";
+import { useState } from "react";
 
 const HomePage = () => {
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
   return (
     <PageContentCard>
       <h1>Oferta</h1>
@@ -38,7 +46,9 @@ const HomePage = () => {
       </p>
       <section>
         <Button href="/galeria">GALERIA - Zobacz nasze pokoje!</Button>
-        <Button href="#">CENNIK</Button>
+        <Button rel="noopener noreferrer" href="/public/cennik.pdf">
+          CENNIK
+        </Button>
       </section>
     </PageContentCard>
   );

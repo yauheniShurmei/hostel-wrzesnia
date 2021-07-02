@@ -10,7 +10,6 @@ const Navbar = () => {
 
   const onOpenMenuHandler = () => {
     setIsOpenBurgerMenu(!isOpenBurgerMenu);
-    console.log(menuClasses);
   };
 
   return (
@@ -21,7 +20,7 @@ const Navbar = () => {
         </div>
         <nav className={menuClasses.join(" ")} onClick={onOpenMenuHandler}>
           <Link href="/strona-glowna">STRONA GŁÓWNA</Link>
-          <Link href="#">OFERTA</Link>
+          <Link href="/cennik">CENNIK</Link>
           <Link href="/galeria">GALERIA</Link>
           <Link href="/kontakt">KONTAKT</Link>
           <span>

@@ -1,4 +1,5 @@
 .PageContentCard {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   font-family: "Source Sans Pro", sans-serif;
@@ -11,10 +12,13 @@
 }
 .PageContentCard h1 {
   font-family: "Source Sans Pro", sans-serif;
-  color: red;
+  color: rgb(255, 58, 58);
   font-weight: 300;
   font-size: 3rem;
   border-bottom: 1px solid black;
+}
+.PageContentCard h2 {
+  color: red;
 }
 .PageContentCard section span {
   font-weight: 600;
@@ -35,6 +39,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* --------table----------- */
+.PageContentCard section table {
+  width: 100%;
+  /* border: 1px solid black; */
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.PageContentCard section table tr {
+  margin-bottom: 20px;
+}
+.PageContentCard section table th {
+  height: 55px;
+  background-color: rgb(255, 152, 68);
+  color: white;
+}
+.PageContentCard section table td {
+  height: 50px;
+  background-color: rgb(189, 189, 189);
+  color: red;
 }
 
 @media (max-width: 960px) {

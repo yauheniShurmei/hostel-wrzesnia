@@ -18,10 +18,13 @@
   height: 100%;
 }
 .Logo {
+  flex-wrap: nowrap;
   height: 70%;
+  width: 100%;
   flex: 0.7;
 }
 .Navbar img {
+  max-width: 270px;
   height: 100%;
   border-radius: 5px;
 }
