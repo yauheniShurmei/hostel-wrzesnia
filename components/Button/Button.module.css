@@ -1,6 +1,6 @@
 .Button {
   text-align: center;
-  /* width: 50px; */
+  width: 300px;
   min-width: 30%;
   padding: 10px;
   margin: 20px;
@@ -15,9 +15,9 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 100%;
   flex-direction: row;
 }
+
 .Button:hover {
   background-color: #222224;
   color: white;

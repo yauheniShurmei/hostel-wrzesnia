@@ -1,6 +1,5 @@
 import Button from "../Button/Button";
 import PageContentCard from "../PageContentCard/PageContentCard";
-import { Document, Page } from "react-pdf";
 import { useState } from "react";
 import classes from "../../pages/cennik/index.module.css";
 
@@ -47,9 +46,24 @@ const HomePage = () => {
       </p>
       <section>
         <Button href="/galeria">GALERIA - Zobacz nasze pokoje!</Button>
-        <Button rel="noopener noreferrer" href="/cennik">
-          CENNIK
-        </Button>
+        <div style={{ position: "relative" }}>
+          <Button rel="noopener noreferrer" href="/cennik">
+            CENNIK
+          </Button>
+          <a
+            style={{
+              position: "absolute",
+              color: "red",
+              textDecoration: "underline",
+              left: "20px",
+            }}
+            href="/cennik.pdf"
+            download="/cennik.pdf"
+            target="_blank"
+          >
+            pobierz cennik jako pdf
+          </a>
+        </div>
       </section>
       <div className={classes.BackgroundImage}></div>
     </PageContentCard>

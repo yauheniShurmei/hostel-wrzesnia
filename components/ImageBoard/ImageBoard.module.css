@@ -9,6 +9,8 @@
   justify-content: center;
   color: white;
   margin-top: 80px;
+  /* background-position: 50%; */
+  /* background-attachment: fixed; */
 }
 .ImageBoard div {
   width: 80%;

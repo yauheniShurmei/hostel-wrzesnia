@@ -22,7 +22,7 @@ const Navbar = () => {
           <img src="logo_arcadia.png" />
         </div>
         <nav className={menuClasses.join(" ")} onClick={onOpenMenuHandler}>
-          <Link href="/strona-glowna">STRONA GŁÓWNA</Link>
+          <Link href="/">STRONA GŁÓWNA</Link>
           <Link href="/cennik">CENNIK</Link>
           <Link href="/galeria">GALERIA</Link>
           <Link href="/kontakt">KONTAKT</Link>

@@ -5,7 +5,7 @@ export default function Custom404() {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace("/strona-glowna");
+    router.replace("/");
   });
 
   return null;
