@@ -3,7 +3,7 @@ import classes from "./index.module.css";
 import { useTranslation } from "react-i18next";
 
 const Cennik = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18next } = useTranslation();
   return (
     <PageContentCard>
       <h1>{t("Cennik")}</h1>
