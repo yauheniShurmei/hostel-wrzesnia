@@ -1,6 +1,6 @@
 import PageContentCard from "../../components/PageContentCard/PageContentCard";
 import classes from "./index.module.css";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 const Cennik = () => {
   const { t, i18next } = useTranslation();

@@ -1,7 +1,7 @@
 import Button from "../Button/Button";
 import PageContentCard from "../PageContentCard/PageContentCard";
 import classes from "../../pages/cennik/index.module.css";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();

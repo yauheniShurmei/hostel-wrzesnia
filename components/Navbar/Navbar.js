@@ -2,7 +2,7 @@ import classes from "./Navbar.module.css";
 import Link from "next/link";
 import { useState } from "react";
 import i18n from "../../pages/i18n";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 const Navbar = () => {
   const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(false);
