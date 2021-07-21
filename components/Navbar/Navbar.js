@@ -1,9 +1,12 @@
 import classes from "./Navbar.module.css";
 import Link from "next/link";
 import { useState } from "react";
+import i18n from "../../pages/i18n";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(false);
+  const { t, i18n } = useTranslation();
 
   let menuClasses = [classes.navLink, classes.CloseMenu];
   isOpenBurgerMenu ? (menuClasses[1] = classes.OpenMenu) : null;
@@ -15,6 +18,13 @@ const Navbar = () => {
     setIsOpenBurgerMenu(!isOpenBurgerMenu);
   };
 
+  const changeLanguage = (ln) => {
+    return () => {
+      i18n.changeLanguage(ln);
+      console.log(`Language changed to ${ln}`);
+    };
+  };
+
   return (
     <header className={classes.Navbar}>
       <main>
@@ -22,13 +32,13 @@ const Navbar = () => {
           <img src="logo_arcadia.png" />
         </div>
         <nav className={menuClasses.join(" ")} onClick={onOpenMenuHandler}>
-          <Link href="/">STRONA GŁÓWNA</Link>
-          <Link href="/cennik">CENNIK</Link>
-          <Link href="/galeria">GALERIA</Link>
-          <Link href="/kontakt">KONTAKT</Link>
+          <Link href="/">{t("STRONA")}</Link>
+          <Link href="/cennik">{t("CENNIK")}</Link>
+          <Link href="/galeria">{t("GALERIA_navbar")}</Link>
+          <Link href="/kontakt">{t("KONTAKT")}</Link>
           <span>
-            <Link href="#">PL</Link>
-            {/* <Link href="#">RUS</Link> */}
+            <button onClick={changeLanguage("pl")}>PL</button>
+            <button onClick={changeLanguage("ukr")}>UKR</button>
           </span>
         </nav>
         <section className={classes.BurgerMenuSection}>

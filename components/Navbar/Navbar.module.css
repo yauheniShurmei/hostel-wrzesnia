@@ -31,22 +31,35 @@
 .navLink {
   flex: 1;
   white-space: nowrap;
-
   float: right;
 }
-.navLink a {
+.navLink span {
+  margin-left: 40px;
+}
+.navLink a,
+.navLink button {
   display: inline-block;
-
   margin: 0 15px;
 }
 
-.Navbar a {
+.navLink button {
+  border: none;
+  background-color: #222224;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.Navbar a,
+.Navbar button {
   color: white;
   position: relative;
   font-weight: lighter;
   font-size: 1.3rem;
 }
-.Navbar a::after {
+.Navbar a::after,
+.Navbar button::after {
   content: " ";
   height: 2px;
   width: 0%;
@@ -56,7 +69,8 @@
   right: 0%;
   transition: 0.3s;
 }
-.Navbar a:hover::after {
+.Navbar a:hover::after,
+.Navbar button:hover::after {
   width: 100%;
   left: 0%;
 }
@@ -67,6 +81,7 @@
   display: none;
   justify-content: flex-end;
 }
+
 .BurgerMenuDiv div {
   width: 2.8rem;
   height: 2px;
@@ -82,6 +97,9 @@
 .OpenMenu {
   left: 0%;
 }
+/* .OpenMenu.navLink button {
+  width: 100%;
+} */
 /* ------------ X ---------------- */
 .isOpen div:nth-of-type(1) {
   transform: translateX(-6px) translateY(-6px) rotate(-45deg);
@@ -108,9 +126,17 @@
     text-align: center;
     transition: all 0.5s;
   }
-  .navLink a {
+  .navLink a,
+  .navLink span {
     display: block;
     line-height: 80px;
+    text-align: center;
+  }
+  .navLink span {
+    margin: 0 15px;
+  }
+  .navLink span button {
+    margin: 0 5px;
   }
   .BurgerMenuSection {
     display: flex;
@@ -119,6 +145,9 @@
   }
 }
 @media (max-width: 960px) {
+  .navLink button {
+    margin-left: 10px;
+  }
   .Navbar main {
     width: 90%;
   }
